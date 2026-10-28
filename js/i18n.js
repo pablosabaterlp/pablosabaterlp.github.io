@@ -187,7 +187,7 @@ window.I18N = {
 
     // Hero
     "hero.badge": "Disponible en julio de 2027 · Jornada completa",
-    "hero.pitch": "Ingeniero eléctrico y de computadores que diseña electrónica de potencia de alta tensión, sistemas embebidos y las PCB que los conectan.",
+    "hero.pitch": "Ingeniero eléctrico y de computadores que desarrolla aplicaciones de IA, electrónica de potencia de alta tensión, sistemas embebidos y las PCB que lo conectan todo.",
     "hero.based.label": "Vivo en",
     "hero.based.value": "Cambridge, MA",
     "hero.from.label": "De",

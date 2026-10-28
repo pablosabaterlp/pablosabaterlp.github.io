@@ -19,3 +19,11 @@ python scripts/make_og.py
 ```
 
 Writes `assets/img/og-image.png` (1200×630), used by the Open Graph / Twitter meta tags. Requires Pillow.
+
+## Photos
+
+```
+python scripts/make_images.py
+```
+
+Reads the full-size originals in `images/` (gitignored) and writes cropped, compressed WebP files to `assets/img/`, with EXIF/GPS stripped. To add or swap a photo, edit the `IMAGES` table at the top of the script and re-run. Hover captions live in `js/i18n.js` under the `img.*` keys.

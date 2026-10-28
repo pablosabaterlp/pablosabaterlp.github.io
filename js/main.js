@@ -47,6 +47,10 @@
       var value = strings[el.dataset.i18nLabel];
       if (value !== undefined) el.setAttribute("aria-label", value);
     });
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      var value = strings[el.dataset.i18nAlt];
+      if (value !== undefined) el.alt = value;
+    });
     document.querySelectorAll(".lang button").forEach(function (btn) {
       btn.setAttribute("aria-pressed", String(btn.dataset.lang === lang));
     });
@@ -158,6 +162,29 @@
     if (!track.clientWidth) return;
     markQr(Math.round(track.scrollLeft / track.clientWidth));
   }, { passive: true });
+
+  /* ---------- Leadership photo slider: swap the two pages every few seconds ---------- */
+  var slider = document.querySelector(".slider");
+  if (slider) {
+    var slideTrack = slider.querySelector(".slider-track");
+    var pages = slider.querySelectorAll(".slider-page");
+    var paused = false;
+    function showPage(i) {
+      slideTrack.classList.toggle("is-shifted", i === 1);
+      pages.forEach(function (p, j) { p.inert = i !== j; });
+    }
+    var page = 0;
+    setInterval(function () {
+      if (paused || document.hidden) return;
+      page = 1 - page;
+      showPage(page);
+    }, 5000);
+    // Hold still while someone is looking at (or tabbed into) a photo, so captions can be read.
+    slider.addEventListener("mouseenter", function () { paused = true; });
+    slider.addEventListener("mouseleave", function () { paused = false; });
+    slider.addEventListener("focusin", function () { paused = true; });
+    slider.addEventListener("focusout", function () { paused = false; });
+  }
 
   /* ---------- Init ---------- */
   setLang(storedLang() || "en");

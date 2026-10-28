@@ -6,11 +6,11 @@
 // Work authorization wording, kept in one place (pending confirmation with Northeastern OGS).
 const WORK_AUTH = {
   en: {
-    short: "OPT + STEM OPT · no sponsorship",
+    short: "OPT + STEM OPT · European Citizenship",
     full: "Eligible for up to 3 years of U.S. work authorization through F-1 OPT and the STEM OPT extension. No visa sponsorship required during this period."
   },
   es: {
-    short: "OPT + STEM OPT · sin patrocinio",
+    short: "OPT + STEM OPT · Pasaporte Europeo",
     full: "Elegible para hasta 3 años de autorización de trabajo en EE. UU. mediante F-1 OPT y la extensión STEM OPT. No se requiere patrocinio de visado durante este periodo."
   }
 };
@@ -39,7 +39,7 @@ window.I18N = {
     "hero.focus.label": "Focus",
     "hero.focus.value": "Power · Embedded · PCB",
     "hero.edu.label": "Education",
-    "hero.edu.value": "Northeastern ECE, Honors",
+    "hero.edu.value": "ECE @ Northeastern Honors",
     "hero.grad.label": "Graduating",
     "hero.grad.value": "May 2027",
     "hero.auth.label": "Work authorization",
@@ -55,11 +55,15 @@ window.I18N = {
     "skills.software": "Software",
     "skills.systems": "Systems",
     "skills.design": "Design",
+    "skills.business": "Business & Analytical Tools",
     "skills.hv": "High-voltage power electronics",
     "skills.bringup": "PCB bring-up",
-    "skills.bench": "Bench testing",
-    "skills.scopes": "Oscilloscopes & DMMs",
-    "skills.crimping": "Crimping",
+    "skills.pcbDesign": "Rigid & flex PCB design",
+    "skills.bench": "Oscilloscopes & Multimeters",
+    "skills.crimping": "Wire harnessing & Crimping",
+    "skills.circuitSim": "Circuit design & simulation",
+    "skills.agentic": "Agentic pipelines",
+    "skills.testPlans": "System test plan design",
     "skills.embedded": "Embedded systems",
     "skills.mcu": "Microcontrollers",
     "skills.printing": "3D printing",
@@ -78,7 +82,9 @@ window.I18N = {
     "exp.anth.b1": "Developed and <em class=\"metric\">provisionally patented</em> an optical fungal screening and robotic automation platform from scratch.",
     "exp.anth.b2": "Machined a SolidWorks-designed platform housing a custom Arduino-based gantry that deposited and scanned samples in a custom PDMS enclosure.",
     "exp.anth.b3": "Programmed a Python fluorescence-scanning GUI with Matplotlib and GRBL to detect localized spore growth.",
-    "exp.anth.b4": "Led independent <em class=\"metric\">168-hr</em> time-lapse imaging runs to systematically test the platform and suggest improvements.",
+    "exp.anth.b4": "Iterated across 3 different versions serving as proof of concept presentations, scaling throughput from 5 to 50 fungi/s (<em class=\"metric\">10x</em>).",
+    "exp.anth.b5": "Led independent <em class=\"metric\">168-hr</em> time-lapse imaging runs to systematically test the platform and suggest improvements.",
+    "exp.anth.b6": "Gave live demos of the platform to stakeholders.",
 
     // 03 Projects
     "prj.title": "What I build on my own time",
@@ -91,6 +97,7 @@ window.I18N = {
     "prj.gait.b1": "Wearable insole with a velostat / flex-PCB resistor array for real-time pressure mapping.",
     "prj.gait.b2": "Owned the power and USB-C charging electronics, plus I2C communication between an IMU and an ESP32.",
     "prj.gait.b3": "Building the semi-rigid flex PCB in Altium and validating it through bench testing and simulation.",
+    "prj.gait.b4": "Balancing tradeoffs between user comfort, data reliability, and ease of use while keeping costs low.",
     "prj.riscv.title": "Single-cycle RISC-V CPU",
     "prj.riscv.desc": "A single-cycle RISC-V processor in SystemVerilog, running on a PYNQ FPGA.",
     "prj.riscv.b1": "Implemented the single-cycle RISC-V architecture in SystemVerilog in Vivado, with signed arithmetic, on a PYNQ FPGA board.",
@@ -103,8 +110,9 @@ window.I18N = {
     "lead.stat1": "PCBs brought up",
     "lead.stat2": "design reviews led",
     "lead.stat3": "BMS reliability gain",
+    "lead.photos": "Team photos",
     "lead.b1": "Own the electrical design of the team's newest EV accumulator, including battery pack sizing based on MATLAB simulations of past competition data.",
-    "lead.b2": "Lead the flex-PCB voltage and temperature sensing project and the custom BMS redesign, improving cell balancing and IC reliability by <em class=\"metric\">~20%</em>.",
+    "lead.b2": "Lead the flex-PCB voltage and temperature sensing project and the custom BMS redesign which improves cell balancing, and implements an IC hot swap mechanism to improve reliability by <em class=\"metric\">~20%</em>.",
     "lead.b3": "Redesigned the battery precharge/discharge circuit from analog to digital control around the ADBMS2950B on the high-voltage PCB.",
 
     // 05 Education
@@ -133,7 +141,9 @@ window.I18N = {
     // 06 Contact
     "contact.title": "Let's build something",
     "contact.lookingTitle": "What I'm looking for",
-    "contact.lookingBody": "[Placeholder — Pablo to write: the roles, teams, and problems you want to work on starting July 2027.]",
+    "contact.lookingBody": "I'm always looking for opportunities to expand my engineering skills, whether that's designing circuit boards to solve real-world problems or testing and validating embedded firmware. From developing power electronics for race cars and wearable health technologies to exploring custom processors or building test plans, system architectures, and automation scripts for robotics, I'm passionate about learning and tackling new engineering challenges across industries.",
+    "contact.lookingBody2": "Outside of engineering, you'll find me at the gym, on the basketball court, experimenting with new recipes, or traveling to a new country.",
+    "contact.lookingBody3": "I'm always open to learning something new and exploring opportunities. Let's connect!",
     "contact.authLabel": "Work authorization",
     "contact.authFull": WORK_AUTH.en.full,
     "contact.scan": "Scan or tap",
@@ -143,7 +153,23 @@ window.I18N = {
     "contact.sendEmail": "Send email",
     "contact.openSite": "Open site",
     "contact.openLinkedin": "Open LinkedIn",
-    "footer.place": "Cambridge, MA"
+    "footer.place": "Cambridge, MA",
+    "footer.built": "Built using Claude Code",
+
+    // Hover captions on photos (keys match the image file names in assets/img/)
+    "img.miele-sql": "SQL database design for an internal automation tool. Certain labels have been ommitted due to NDA.",
+    "img.anth-gantry": "Fluorescence-scanning gantry inside its enclosure",
+    "img.anth-depositing": "Microfluidics sample-depositing hardware with the control GUI",
+    "img.gait-exploded": "Exploded view: insole layers, sensor PCB, and Bluetooth link to the app",
+    "img.gait-schematic": "Power schematic: USB-C input, battery charger, buck-boost converter, and indicators",
+    "img.gait-topview": "Top view: pressure zones, clip connectors, ESP32, IMU, and charging connector",
+    "img.riscv-fpga": "Testing the CPU on the PYNQ-Z2 FPGA board",
+    "img.riscv-datapath": "Single-cycle datapath: register file, ALU, instruction decoder, and memory",
+    "img.ner-car": "Me and the car!",
+    "img.ner-track": "Traction test at FHE New Hampshire",
+    "img.ner-flex-pcb": "Flex-PCB manufacturing on the bench",
+    "img.ner-hv-front": "High-voltage plate, front",
+    "img.ner-hv-back": "High-voltage plate, back"
   },
 
   es: {
@@ -185,11 +211,15 @@ window.I18N = {
     "skills.software": "Software",
     "skills.systems": "Sistemas",
     "skills.design": "Diseño",
+    "skills.business": "Herramientas de negocio y análisis",
     "skills.hv": "Electrónica de potencia de alta tensión",
     "skills.bringup": "Puesta en marcha de PCB",
-    "skills.bench": "Pruebas en banco",
-    "skills.scopes": "Osciloscopios y multímetros",
-    "skills.crimping": "Crimpado",
+    "skills.pcbDesign": "Diseño de PCB rígidas y flexibles",
+    "skills.bench": "Osciloscopios, multímetros y pruebas en banco",
+    "skills.crimping": "Cableado y crimpado",
+    "skills.circuitSim": "Diseño y simulación de circuitos",
+    "skills.agentic": "Pipelines agénticos",
+    "skills.testPlans": "Diseño de planes de prueba de sistemas",
     "skills.embedded": "Sistemas embebidos",
     "skills.mcu": "Microcontroladores",
     "skills.printing": "Impresión 3D",
@@ -208,7 +238,9 @@ window.I18N = {
     "exp.anth.b1": "Desarrollé desde cero, y <em class=\"metric\">patenté provisionalmente</em>, una plataforma óptica de cribado de hongos con automatización robótica.",
     "exp.anth.b2": "Mecanicé una plataforma diseñada en SolidWorks que aloja un pórtico propio basado en Arduino para depositar y escanear muestras en un recinto de PDMS.",
     "exp.anth.b3": "Programé en Python una interfaz de escaneo por fluorescencia con Matplotlib y GRBL para detectar crecimiento localizado de esporas.",
-    "exp.anth.b4": "Dirigí de forma independiente sesiones de imagen time-lapse de <em class=\"metric\">168 h</em> para probar sistemáticamente la plataforma y proponer mejoras.",
+    "exp.anth.b4": "Iteré a lo largo de 3 versiones que sirvieron como presentaciones de prueba de concepto, aumentando el rendimiento de 5 a 50 hongos/s (<em class=\"metric\">10x</em>).",
+    "exp.anth.b5": "Dirigí de forma independiente sesiones de imagen time-lapse de <em class=\"metric\">168 h</em> para probar sistemáticamente la plataforma y proponer mejoras.",
+    "exp.anth.b6": "Hice demostraciones en directo de la plataforma ante las partes interesadas.",
 
     // 03 Projects
     "prj.title": "Lo que construyo en mi tiempo libre",
@@ -221,6 +253,7 @@ window.I18N = {
     "prj.gait.b1": "Plantilla con una matriz de resistencias de velostat / PCB flexible para mapear la presión en tiempo real.",
     "prj.gait.b2": "Responsable de la electrónica de alimentación y carga USB-C, y de la comunicación I2C entre una IMU y un ESP32.",
     "prj.gait.b3": "Diseñando la PCB semirrígida-flexible en Altium y validándola con pruebas en banco y simulación.",
+    "prj.gait.b4": "Equilibrando la comodidad del usuario, la fiabilidad de los datos y la facilidad de uso, manteniendo los costes bajos.",
     "prj.riscv.title": "CPU RISC-V monociclo",
     "prj.riscv.desc": "Un procesador RISC-V monociclo en SystemVerilog sobre una FPGA PYNQ.",
     "prj.riscv.b1": "Implementé la arquitectura RISC-V monociclo en SystemVerilog con Vivado, con aritmética con signo, sobre una placa FPGA PYNQ.",
@@ -233,6 +266,7 @@ window.I18N = {
     "lead.stat1": "PCB puestas en marcha",
     "lead.stat2": "revisiones de diseño dirigidas",
     "lead.stat3": "más fiabilidad del BMS",
+    "lead.photos": "Fotos del equipo",
     "lead.b1": "Responsable del diseño eléctrico del nuevo acumulador del coche eléctrico, incluido el dimensionado del pack de baterías a partir de simulaciones en MATLAB con datos de competiciones anteriores.",
     "lead.b2": "Dirijo el proyecto de medición de tensión y temperatura con PCB flexible y el rediseño del BMS propio, mejorando el balanceo de celdas y la fiabilidad de los CI en un <em class=\"metric\">~20%</em>.",
     "lead.b3": "Rediseñé el circuito de precarga/descarga de la batería, pasando de control analógico a digital en torno al ADBMS2950B, en la PCB de alta tensión.",
@@ -263,7 +297,9 @@ window.I18N = {
     // 06 Contact
     "contact.title": "Construyamos algo",
     "contact.lookingTitle": "Lo que busco",
-    "contact.lookingBody": "[Texto provisional — Pablo lo escribirá: los puestos, equipos y problemas en los que quieres trabajar a partir de julio de 2027.]",
+    "contact.lookingBody": "Siempre busco oportunidades para ampliar mis habilidades de ingeniería, ya sea diseñando placas de circuito que resuelvan problemas reales o probando y validando firmware embebido. Desde desarrollar electrónica de potencia para coches de competición y tecnología sanitaria vestible hasta explorar procesadores propios o crear planes de prueba, arquitecturas de sistemas y scripts de automatización para robótica, me apasiona aprender y afrontar nuevos retos de ingeniería en cualquier sector.",
+    "contact.lookingBody2": "Fuera de la ingeniería, me encontrarás en el gimnasio, en la cancha de baloncesto, probando recetas nuevas o viajando a un país nuevo.",
+    "contact.lookingBody3": "Siempre estoy abierto a aprender algo nuevo y explorar oportunidades. ¡Conectemos!",
     "contact.authLabel": "Permiso de trabajo",
     "contact.authFull": WORK_AUTH.es.full,
     "contact.scan": "Escanea o pulsa",
@@ -273,6 +309,22 @@ window.I18N = {
     "contact.sendEmail": "Enviar email",
     "contact.openSite": "Abrir web",
     "contact.openLinkedin": "Abrir LinkedIn",
-    "footer.place": "Cambridge, MA"
+    "footer.place": "Cambridge, MA",
+    "footer.built": "Hecho con Claude Code",
+
+    // Pies de foto al pasar el ratón
+    "img.miele-sql": "Diseño de base de datos SQL para una herramienta interna de automatización. Imagen solo ilustrativa por acuerdo de confidencialidad (NDA).",
+    "img.anth-gantry": "Pórtico de escaneo por fluorescencia dentro de su recinto",
+    "img.anth-depositing": "Hardware de depósito de muestras de microfluídica con la interfaz de control",
+    "img.gait-exploded": "Vista explosionada: capas de la plantilla, PCB de sensores y enlace Bluetooth con la app",
+    "img.gait-schematic": "Esquemático de alimentación: entrada USB-C, cargador de batería, convertidor buck-boost e indicadores",
+    "img.gait-topview": "Vista superior: zonas de presión, conectores de clip, ESP32, IMU y conector de carga",
+    "img.riscv-fpga": "Probando la CPU en la placa FPGA PYNQ-Z2",
+    "img.riscv-datapath": "Ruta de datos monociclo: banco de registros, ALU, decodificador de instrucciones y memoria",
+    "img.ner-car": "Yo en el coche de Northeastern Electric Racing",
+    "img.ner-track": "El equipo trabajando en el coche en el circuito",
+    "img.ner-flex-pcb": "Fabricación de la PCB flexible para medir tensión y temperatura del acumulador",
+    "img.ner-hv-front": "Placa de alto voltaje, cara frontal",
+    "img.ner-hv-back": "Placa de alto voltaje, cara trasera"
   }
 };

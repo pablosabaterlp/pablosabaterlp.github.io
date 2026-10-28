@@ -31,7 +31,7 @@ window.I18N = {
 
     // Hero
     "hero.badge": "Available July 2027 · Full-time",
-    "hero.pitch": "Electrical and computer engineer building high-voltage power electronics, embedded systems, and the PCBs that tie them together.",
+    "hero.pitch": "Electrical and computer engineer building AI applications, high-voltage power electronics, embedded systems, and the PCBs that tie everything together.",
     "hero.based.label": "Based in",
     "hero.based.value": "Cambridge, MA",
     "hero.from.label": "From",
